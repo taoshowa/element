@@ -296,6 +296,10 @@
       },
       defaultFirstOption: Boolean,
       reserveKeyword: Boolean,
+      labelKey: {
+        type: String,
+        default: 'label'
+      },
       valueKey: {
         type: String,
         default: 'value'
@@ -533,7 +537,7 @@
         }
         if (option) return option;
         const label = (!isObject && !isNull && !isUndefined)
-          ? String(value) : '';
+          ? String(value) : isObject ? value[this.labelKey] : ''
         let newOption = {
           value: value,
           currentLabel: label
