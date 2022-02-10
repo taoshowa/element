@@ -521,7 +521,7 @@ Create and select new items that are not included in select options
 :::
 
 :::tip
-If the binding value of Select is an object, make sure to assign `value-key` as its unique identity key name.
+If the binding value of Select is an object, make sure to assign `value-key` as its unique identity key name, and assign `label-key` as its selected key name.
 :::
 
 ### Select Attributes
@@ -531,6 +531,7 @@ If the binding value of Select is an object, make sure to assign `value-key` as 
 | multiple | whether multiple-select is activated | boolean | — | false |
 | disabled | whether Select is disabled | boolean | — | false |
 | value-key | unique identity key name for value, required when value is an object | string | — | value |
+| label-key | selected key name for label, required when value is an object | string | — | label |
 | size | size of Input | string | large/small/mini | — |
 | clearable | whether select can be cleared | boolean | — | false |
 | collapse-tags | whether to collapse tags to a text when multiple selecting | boolean | — | false |

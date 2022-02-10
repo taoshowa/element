@@ -558,6 +558,46 @@ describe('Select', () => {
     }, 100);
   });
 
+  it('multiple select of object typed value with default value when options is empty', done => {
+    vm = createVue({
+      template: `
+        <div>
+          <el-select v-model="value" multiple label-key="name" value-key="id">
+            <el-option
+              v-for="item in options"
+              :label="item.name"
+              :key="item.id"
+              :value="item">
+            </el-option>
+          </el-select>
+        </div>
+      `,
+
+      data() {
+        return {
+          options: [],
+          value: [{
+            id: 1,
+            name: 'label1'
+          }, {
+            id: 2,
+            name: 'label2'
+          }]
+        };
+      }
+    }, true);
+    expect(vm.value.length).to.equal(2);
+    vm.$nextTick(() => {
+      setTimeout(() => {
+        const tags = vm.$el.querySelectorAll('.el-select__tags-text');
+        expect(tags.length).to.equal(2);
+        expect(tags[0].textContent).to.be.equal('label1');
+        expect(tags[1].textContent).to.be.equal('label2');
+        done();
+      }, 100);
+    });
+  });
+
   it('multiple remove-tag', done => {
     sinon.stub(window.console, 'log');
     vm = createVue({

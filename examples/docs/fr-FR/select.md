@@ -523,7 +523,7 @@ Vous pouvez entrer des choix dans le champ de sélection qui ne sont pas incluse
 :::
 
 :::tip
-Si la valeur de Select est un objet, assurez-vous d'utiliser `value-key` comme identifiant unique.
+Si la valeur de Select est un objet, assurez-vous d'utiliser `value-key` comme identifiant unique, et assigne `label-key` comme nom de la clé sélectionnée.
 :::
 
 ### Attributs de Select
@@ -534,6 +534,7 @@ Si la valeur de Select est un objet, assurez-vous d'utiliser `value-key` comme i
 | multiple | Si la sélection multiple est activée. | boolean | — | false |
 | disabled | Si le sélecteur est désactivé. | boolean | — | false |
 | value-key | Identifiant unique pour la valeur, requis quand la valeur est un objet. | string | — | value |
+| label-key | nom de la clé sélectionnée pour l'étiquette, requis quand la valeur est un objet. | string | — | label |
 | size | Taille de l'Input. | string | large/small/mini | — |
 | clearable | Si la sélection est effaçable. | boolean | — | false |
 | collapse-tags | Si les tags peuvent être réduits, dans le cas d'une sélection multiple. | boolean | — | false |

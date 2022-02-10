@@ -527,7 +527,7 @@ Crear y seleccionar nuevos items que no están incluidas en las opciones de sele
 
 :::tip
 
-Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `value-key` como el nombre único de la clave de identidad.
+Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `value-key` como el nombre único de la clave de identidad, y asignar `label-key` como nombre de la clave seleccionada.
 
 :::
 
@@ -539,6 +539,7 @@ Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `va
 | disabled             | si Select esta deshabilitado             | boolean  | —                 | false            |
 | collapse-tags        | si se colapsan los tags a un texto cuando `multiple` es `true`. | boolean  | —                 | false            |
 | value-key            | nombre de clave de identidad única para el valor, necesario cuando el valor es un objeto. | string   | —                 | value            |
+| label-key            | nombre de la clave seleccionada para la etiqueta, necesario cuando el valor es un objeto. | string | — | label |
 | size                 | tamaño del Input                         | string   | large/small/mini  | —                |
 | clearable            | si el select puede ser limpiado | boolean  | —                 | false            |
 | multiple-limit       | máximo numero de opciones que el usuario puede seleccionar cuando `multiple` es `true`.  Sin límite cuando se fija a 0 | number   | —                 | 0                |
